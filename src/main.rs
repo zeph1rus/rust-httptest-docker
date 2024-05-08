@@ -52,7 +52,7 @@ async fn hello(req: Request<hyper::body::Incoming>) -> Result<Response<Full<Byte
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-    let addr = SocketAddr::from(([0,0,0,0], 3000));
+    let addr = SocketAddr::from(([0,0,0,0], 5000));
     let listener = TcpListener::bind(addr).await?;
     loop {
         let (stream, _) = listener.accept().await?;
